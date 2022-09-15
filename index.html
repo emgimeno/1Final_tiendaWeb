@@ -8,7 +8,7 @@
     <title>TiendaWeb</title>
 </head>
 <body>
-    <!--
+    
     <head>logo y menu</head>
     <main>
         <h1>Bienvenidos a TiendaWeb Olimpo.tech</h1>
@@ -17,22 +17,43 @@
     </main>
    
     <section>
-        <form class="formRegister" action=" " target="_blank">
+        <form class="formRegister" action="post" target="_blank">
             <input type="text" name="nombres" id="nombres" placeholder="ingrese su nombre">
             <input type="text" name="apellidos" id="apellidos" placeholder="ingrese su apellido">
             <input type="text" name="dni" id="dnis" placeholder="ingrese su dni">
             <input type="text" name="mail" id="mail" placeholder="ingrese su mail">
             <input type="text" name="direccion" id="dir" placeholder="ingrese su direccion">
             <p>estoy de acurso con <a href="#">terminos y condiciones</a></p>
-            <input type="submit" value="registrase" id="">
+            <input type="button" value="registrase" id="btnRegistrarse" onclick="campoRequerido()">
         </form>  
-    </section>-->
+    </section>
 
 
 
 
 
+    <!--<h3 id="demo" onclick="myFunction()">Click me to change my color.</h3>-->
+
+    <script>
+    function cambiarColor() {
+      document.getElementById("btnRegistrarse").style.color = "red";
+    }
+
+    function campoRequerido() {
+        if(document.getElementById('nombres').value.length == 0){
+            window.alert("El campo nombres es requerido");
+            return;
+        }
+
+        if(document.getElementById('apellidos').value.length == 0){
+            window.alert("El campo apellido es requerido");
+            return;
+        }
+
+        window.alert("Registro Generado");
+    }
+    </script>
     
-    <script src="tiendaWeb.js" ></script>
+    <!--<script src="tiendaWeb.js" ></script>-->
 </body>
 </html>
